@@ -31,11 +31,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jfS-wg-28z"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drx-RU-06m">
                                         <rect key="frame" x="180" y="0.0" width="90" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Previous"/>
+                                        <connections>
+                                            <action selector="previousButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nJm-5g-vdt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

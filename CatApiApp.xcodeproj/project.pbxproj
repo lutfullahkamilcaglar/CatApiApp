@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F56B20CF28E3244D00234BB6 /* CatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56B20CE28E3244D00234BB6 /* CatData.swift */; };
+		F56B20CF28E3244D00234BB6 /* CatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56B20CE28E3244D00234BB6 /* CatModel.swift */; };
 		F56B20D128E382F000234BB6 /* 5.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F56B20D028E382F000234BB6 /* 5.pdf */; };
+		F56B20E128E4A77E00234BB6 /* CatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56B20E028E4A77E00234BB6 /* CatRepository.swift */; };
 		F5CABC3E28E1B05A00A76062 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CABC3D28E1B05A00A76062 /* AppDelegate.swift */; };
 		F5CABC4028E1B05A00A76062 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CABC3F28E1B05A00A76062 /* SceneDelegate.swift */; };
 		F5CABC4228E1B05A00A76062 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CABC4128E1B05A00A76062 /* ViewController.swift */; };
@@ -18,8 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F56B20CE28E3244D00234BB6 /* CatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatData.swift; sourceTree = "<group>"; };
+		F56B20CE28E3244D00234BB6 /* CatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatModel.swift; sourceTree = "<group>"; };
 		F56B20D028E382F000234BB6 /* 5.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 5.pdf; sourceTree = "<group>"; };
+		F56B20E028E4A77E00234BB6 /* CatRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatRepository.swift; sourceTree = "<group>"; };
 		F5CABC3A28E1B05A00A76062 /* CatApiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatApiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CABC3D28E1B05A00A76062 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5CABC3F28E1B05A00A76062 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,12 +65,13 @@
 				F5CABC3D28E1B05A00A76062 /* AppDelegate.swift */,
 				F5CABC3F28E1B05A00A76062 /* SceneDelegate.swift */,
 				F5CABC4128E1B05A00A76062 /* ViewController.swift */,
-				F56B20CE28E3244D00234BB6 /* CatData.swift */,
+				F56B20CE28E3244D00234BB6 /* CatModel.swift */,
 				F5CABC4328E1B05A00A76062 /* Main.storyboard */,
 				F5CABC4628E1B05B00A76062 /* Assets.xcassets */,
 				F5CABC4828E1B05B00A76062 /* LaunchScreen.storyboard */,
 				F5CABC4B28E1B05B00A76062 /* Info.plist */,
 				F56B20D028E382F000234BB6 /* 5.pdf */,
+				F56B20E028E4A77E00234BB6 /* CatRepository.swift */,
 			);
 			path = CatApiApp;
 			sourceTree = "<group>";
@@ -147,7 +150,8 @@
 			files = (
 				F5CABC4228E1B05A00A76062 /* ViewController.swift in Sources */,
 				F5CABC3E28E1B05A00A76062 /* AppDelegate.swift in Sources */,
-				F56B20CF28E3244D00234BB6 /* CatData.swift in Sources */,
+				F56B20CF28E3244D00234BB6 /* CatModel.swift in Sources */,
+				F56B20E128E4A77E00234BB6 /* CatRepository.swift in Sources */,
 				F5CABC4028E1B05A00A76062 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,41 +10,67 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var catImage: UIImageView!
-    let urlString = "https://api.thecatapi.com/v1/images/search?limit=10&api_key=live_JxOOMGfIT1WVQSAUOzyUcR9OtwDaih5Tt7ShLFb5f4dxK493UOFDcpAmot1mLx4i"
     
+    var catRepository = CatRepository()
     
-    
-//    let urlString2 = "https://api.thecatapi.com/v1/images/0XYvRd7oD"
-    
+    var catDataList: [CatModel] = []
+    var currentCatIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchPhotos()
-        
+        catRepository.delegate = self
+        catRepository.getData()
     }
     
-    
-    func fetchPhotos(){
-        print("asdfaf")
-        guard let url = URL(string: urlString) else {
-            print("asdfaf2")
-            return
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        let tempIndex = currentCatIndex + 1
+        if !(tempIndex >= catDataList.count) {
+            currentCatIndex += 1
+            updateImage()
         }
-        let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-            if let error = error {
-                print("Error accessing: \(error)")
-                return
+    }
+    
+    @IBAction func previousButtonPressed(_ sender: Any) {
+        let tempIndex = currentCatIndex - 1
+        if !(tempIndex < 0) {
+            currentCatIndex -= 1
+            updateImage()
+        }
+    }
+    
+    func updateImage() {
+        if !catDataList.isEmpty {
+            let imageUrl = catDataList[currentCatIndex].url
+            downloadImage(imageUrl: imageUrl) { image in
+                DispatchQueue.main.async {
+                    self.catImage.image = image
+                }
             }
-            if let responseValue = data {
-                print(responseValue)
-                if let jsonResult = try? JSONDecoder().decode([APIResponse].self, from: responseValue) {
-                    DispatchQueue.main.async{ [weak self] in
-                        self?.catImage.image = UIImage(data: jsonResult.first?.url)
+        }
+    }
+    
+    func downloadImage(imageUrl: String, loadImage: @escaping (UIImage) -> ()) {
+        DispatchQueue.global(qos: .background).async {
+            if let url = URL(string: imageUrl) {
+                if let data = try? Data(contentsOf: url) {
+                    if let image = UIImage(data: data) {
+                        loadImage(image)
                     }
                 }
             }
-        })
-        task.resume()
+        }
     }
 }
 
+extension ViewController: CatRepositoryDelegate {
+
+    func didUpdateCatData(catData: [CatModel]) {
+        catDataList.append(contentsOf: catData)
+        updateImage()
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
+    }
+    
+}

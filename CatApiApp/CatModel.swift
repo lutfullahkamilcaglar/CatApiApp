@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct APIResponse: Decodable {
+struct CatModel: Decodable {
     let breeds: [Breeds]
     let id: String
     let url: String
