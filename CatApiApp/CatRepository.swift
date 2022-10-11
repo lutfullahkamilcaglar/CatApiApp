@@ -14,7 +14,7 @@ protocol CatRepositoryDelegate {
 
 struct CatRepository {
     
-    let urlString = "https://api.thecatapi.com/v1/images/search?limit=10&api_key=live_JxOOMGfIT1WVQSAUOzyUcR9OtwDaih5Tt7ShLFb5f4dxK493UOFDcpAmot1mLx4i"
+    let urlString = "https://api.thecatapi.com/v1/images/search?limit=100&api_key=live_JxOOMGfIT1WVQSAUOzyUcR9OtwDaih5Tt7ShLFb5f4dxK493UOFDcpAmot1mLx4i"
     
     var delegate: CatRepositoryDelegate?
     

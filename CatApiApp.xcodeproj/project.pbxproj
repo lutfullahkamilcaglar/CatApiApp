@@ -30,6 +30,7 @@
 		F5CABC4628E1B05B00A76062 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5CABC4928E1B05B00A76062 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5CABC4B28E1B05B00A76062 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5F5700528F5F06B00F1D3F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +67,13 @@
 				F5CABC3F28E1B05A00A76062 /* SceneDelegate.swift */,
 				F5CABC4128E1B05A00A76062 /* ViewController.swift */,
 				F56B20CE28E3244D00234BB6 /* CatModel.swift */,
+				F56B20E028E4A77E00234BB6 /* CatRepository.swift */,
+				F5F5700528F5F06B00F1D3F3 /* README.md */,
 				F5CABC4328E1B05A00A76062 /* Main.storyboard */,
 				F5CABC4628E1B05B00A76062 /* Assets.xcassets */,
 				F5CABC4828E1B05B00A76062 /* LaunchScreen.storyboard */,
 				F5CABC4B28E1B05B00A76062 /* Info.plist */,
 				F56B20D028E382F000234BB6 /* 5.pdf */,
-				F56B20E028E4A77E00234BB6 /* CatRepository.swift */,
 			);
 			path = CatApiApp;
 			sourceTree = "<group>";

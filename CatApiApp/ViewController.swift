@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var catImage: UIImageView!
     
+    @IBOutlet weak var descriptionLabel: UILabel!
     var catRepository = CatRepository()
     
     var catDataList: [CatModel] = []
