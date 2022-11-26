@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,83 +16,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="28Q-HS-BYW">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <color key="backgroundColor" systemColor="labelColor"/>
-                                <color key="tintColor" systemColor="systemBackgroundColor"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QKh-Zm-dEU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QKh-Zm-dEU" customClass="RoundedImageView" customModule="CatApiApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="109.00000000000003" width="393" height="446.66666666666674"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="446.66666666666674" id="JCM-rd-KSS"/>
+                                </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="3d7-Kx-pxo">
-                                <rect key="frame" x="60" y="593.66666666666663" width="273" height="34.333333333333371"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKq-qt-4jS">
-                                        <rect key="frame" x="0.0" y="0.0" width="91.666666666666671" height="34.333333333333336"/>
-                                        <color key="tintColor" systemColor="systemGreenColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Next">
-                                            <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </backgroundConfiguration>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jfS-wg-28z"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drx-RU-06m">
-                                        <rect key="frame" x="181.66666666666666" y="0.0" width="91.333333333333343" height="34.333333333333336"/>
-                                        <color key="tintColor" red="1" green="0.26179855070000002" blue="0.0014803857120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Previous">
-                                            <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </backgroundConfiguration>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="previousButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nJm-5g-vdt"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKq-qt-4jS" customClass="IButton" customModule="CatApiApp" customModuleProvider="target">
+                                <rect key="frame" x="40" y="660" width="320" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next">
+                                    <backgroundConfiguration key="background"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jfS-wg-28z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drx-RU-06m" customClass="IButton" customModule="CatApiApp" customModuleProvider="target">
+                                <rect key="frame" x="40" y="740" width="320" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Previous">
+                                    <backgroundConfiguration key="background"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="previousButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nJm-5g-vdt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="28Q-HS-BYW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0ei-Ue-AoU"/>
                             <constraint firstItem="QKh-Zm-dEU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4hv-tX-G1A"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3d7-Kx-pxo" secondAttribute="bottom" constant="190" id="7bF-iH-I25"/>
-                            <constraint firstItem="3d7-Kx-pxo" firstAttribute="top" secondItem="QKh-Zm-dEU" secondAttribute="bottom" constant="38" id="Fa6-wE-fnj"/>
-                            <constraint firstItem="28Q-HS-BYW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JZz-00-aNF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3d7-Kx-pxo" secondAttribute="trailing" constant="60" id="LF1-JS-KWK"/>
-                            <constraint firstAttribute="bottom" secondItem="28Q-HS-BYW" secondAttribute="bottom" id="UiT-hJ-Gak"/>
-                            <constraint firstItem="28Q-HS-BYW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cJq-vj-oop"/>
-                            <constraint firstItem="QKh-Zm-dEU" firstAttribute="trailing" secondItem="28Q-HS-BYW" secondAttribute="trailing" id="ddq-8R-dfT"/>
-                            <constraint firstItem="QKh-Zm-dEU" firstAttribute="leading" secondItem="28Q-HS-BYW" secondAttribute="leading" id="gCN-T5-H4K"/>
-                            <constraint firstItem="3d7-Kx-pxo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="j8Y-fE-NaT"/>
                             <constraint firstItem="QKh-Zm-dEU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="v8V-8p-wed"/>
                             <constraint firstItem="QKh-Zm-dEU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zmV-mc-tN4"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="NextButtonLabel" destination="sKq-qt-4jS" id="UTC-2N-UZV"/>
+                        <outlet property="PreviousButton" destination="Drx-RU-06m" id="kbN-mf-qyO"/>
                         <outlet property="catImage" destination="QKh-Zm-dEU" id="IVC-0O-Cr2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18" y="-6"/>
+            <point key="canvasLocation" x="17.557251908396946" y="-6.3380281690140849"/>
         </scene>
     </scenes>
     <resources>
-        <image name="5" width="595" height="595"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

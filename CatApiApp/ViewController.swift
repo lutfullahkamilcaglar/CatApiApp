@@ -9,9 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var catImage: UIImageView!
+    @IBOutlet weak var PreviousButton: IButton!
     
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var catImage: RoundedImageView!
+    
+    @IBOutlet private var NextButtonLabel: IButton!
+    
+    
     var catRepository = CatRepository()
     
     var catDataList: [CatModel] = []
@@ -21,9 +25,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         catRepository.delegate = self
         catRepository.getData()
+        
     }
     
-    @IBAction func nextButtonPressed(_ sender: Any) {
+    @IBAction func nextButtonPressed(_ sender: IButton) {
+        NextButtonLabel.bounce()
         let tempIndex = currentCatIndex + 1
         if !(tempIndex >= catDataList.count) {
             currentCatIndex += 1
@@ -31,7 +37,8 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func previousButtonPressed(_ sender: Any) {
+    @IBAction func previousButtonPressed(_ sender: IButton) {
+        PreviousButton.cornerRadiusAnimation()
         let tempIndex = currentCatIndex - 1
         if !(tempIndex < 0) {
             currentCatIndex -= 1
@@ -39,12 +46,15 @@ class ViewController: UIViewController {
         }
     }
     
+    
     func updateImage() {
         if !catDataList.isEmpty {
             let imageUrl = catDataList[currentCatIndex].url
             downloadImage(imageUrl: imageUrl) { image in
                 DispatchQueue.main.async {
+                    self.catImage.layer.cornerRadius = 25
                     self.catImage.image = image
+                    
                 }
             }
         }
