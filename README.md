@@ -5,7 +5,7 @@ Utilised Core Animation to create a visually pleasing user experience.
 
 ## Tecnologies
 
-- Api
+- API
 - Core Animations
 - Auto Layout
 
