@@ -1,8 +1,11 @@
-# CatApiApp
-With this catApi I can see cute cat pictures :D
+## CatApiApp
 
-#  CatAPI
-- RestApi
+This application shows cat pictures from API calls. 
+Utilised Core Animation to create a visually pleasing user experience.
+
+## Tecnologies
+
+- Api
 - Core Animations
 - Auto Layout
 
